@@ -8,20 +8,46 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
+// MARK: Typealiases
 
-		// Do any additional setup after loading the view.
+private typealias Private_Helpers = ViewController
+private typealias Private_GenerateFiles = ViewController
+
+
+// MARK: Classes
+
+final class ViewController: NSViewController {
+
+	@IBOutlet weak var textField: NSTextFieldCell!
+	
+
+	@IBAction func didClickGenerate(_ sender: NSButton) {
+		removeFirstResponser()
+		guard textFieldHasContent() else { return }
+		
+		
 	}
-
-	override var representedObject: Any? {
-		didSet {
-		// Update the view, if already loaded.
-		}
-	}
-
-
+	
+	
 }
 
+private extension Private_Helpers {
+	
+	func removeFirstResponser() {
+		self.view.window?.makeFirstResponder(nil)
+	}
+	
+	func textFieldHasContent() -> Bool {
+		return textField.stringValue.characters.count > 0
+	}
+	
+	
+}
+
+private extension Private_GenerateFiles {
+	
+	
+	
+	
+}
