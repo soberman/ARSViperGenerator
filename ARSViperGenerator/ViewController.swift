@@ -8,46 +8,17 @@
 
 import Cocoa
 
-
-// MARK: Typealiases
-
-private typealias Private_Helpers = ViewController
-private typealias Private_GenerateFiles = ViewController
-
-
-// MARK: Classes
-
 final class ViewController: NSViewController {
 
 	@IBOutlet weak var textField: NSTextFieldCell!
 	
-
+	
 	@IBAction func didClickGenerate(_ sender: NSButton) {
-		removeFirstResponser()
-		guard textFieldHasContent() else { return }
-		
-		
-	}
-	
-	
-}
-
-private extension Private_Helpers {
-	
-	func removeFirstResponser() {
 		self.view.window?.makeFirstResponder(nil)
-	}
-	
-	func textFieldHasContent() -> Bool {
-		return textField.stringValue.characters.count > 0
+		FilesGenerator.generateModule(withName: textField.stringValue)
 	}
 	
 	
 }
 
-private extension Private_GenerateFiles {
-	
-	
-	
-	
-}
+

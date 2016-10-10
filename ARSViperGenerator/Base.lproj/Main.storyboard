@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -686,15 +687,15 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Yf-9l-Uol">
-                                <rect key="frame" x="16" y="198" width="448" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Module Name..." drawsBackground="YES" id="8rh-7V-DEV">
+                                <rect key="frame" x="207" y="165" width="257" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Module Name..." drawsBackground="YES" usesSingleLineMode="YES" id="8rh-7V-DEV">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ERO-NZ-QXj">
-                                <rect key="frame" x="192" y="117" width="96" height="32"/>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ERO-NZ-QXj">
+                                <rect key="frame" x="192" y="101" width="96" height="32"/>
                                 <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cOW-l6-kkK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -703,12 +704,43 @@
                                     <action selector="didClickGenerate:" target="XfG-lQ-9wD" id="PZT-91-bRf"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qG0-Kx-mtQ">
+                                <rect key="frame" x="16" y="220" width="162" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Choose destination folder:" id="iLO-CP-eMH">
+                                    <font key="font" metaFont="systemUltraLight" size="13"/>
+                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cZH-Up-7es">
+                                <rect key="frame" x="16" y="168" width="134" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter module's name:" id="3st-Pm-MB9">
+                                    <font key="font" metaFont="systemUltraLight" size="13"/>
+                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neK-zz-ZoY">
+                                <rect key="frame" x="197" y="215" width="268" height="26"/>
+                                <pathCell key="cell" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="Jam-kz-OJS">
+                                    <font key="font" metaFont="system"/>
+                                    <url key="url" string="file://localhost/Applications/"/>
+                                    <color key="backgroundColor" red="0.8980392157" green="0.92549019610000005" blue="0.97254901959999995" alpha="0.0" colorSpace="deviceRGB"/>
+                                </pathCell>
+                            </pathControl>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="3Yf-9l-Uol" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="EOF-Ll-MPE"/>
-                            <constraint firstItem="3Yf-9l-Uol" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="50" id="Wx4-yl-8ma"/>
-                            <constraint firstItem="ERO-NZ-QXj" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="eZV-LH-veK"/>
-                            <constraint firstItem="ERO-NZ-QXj" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="poQ-qf-4uW"/>
+                            <constraint firstAttribute="trailing" secondItem="neK-zz-ZoY" secondAttribute="trailing" constant="18" id="7C5-0j-NMl"/>
+                            <constraint firstItem="ERO-NZ-QXj" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="8LA-L8-NYb"/>
+                            <constraint firstItem="3Yf-9l-Uol" firstAttribute="baseline" secondItem="cZH-Up-7es" secondAttribute="baseline" id="BcF-F0-cCx"/>
+                            <constraint firstItem="cZH-Up-7es" firstAttribute="leading" secondItem="qG0-Kx-mtQ" secondAttribute="leading" id="CBG-nu-50o"/>
+                            <constraint firstItem="qG0-Kx-mtQ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="33" id="Olk-SJ-ZhX"/>
+                            <constraint firstItem="qG0-Kx-mtQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="18" id="Wph-ny-Mcy"/>
+                            <constraint firstItem="neK-zz-ZoY" firstAttribute="baseline" secondItem="qG0-Kx-mtQ" secondAttribute="baseline" id="YJb-kR-ABF"/>
+                            <constraint firstItem="3Yf-9l-Uol" firstAttribute="leading" secondItem="neK-zz-ZoY" secondAttribute="leading" constant="7" id="dg6-AI-D4g"/>
+                            <constraint firstItem="cZH-Up-7es" firstAttribute="top" secondItem="qG0-Kx-mtQ" secondAttribute="bottom" constant="35" id="hut-qs-73e"/>
+                            <constraint firstItem="neK-zz-ZoY" firstAttribute="leading" secondItem="qG0-Kx-mtQ" secondAttribute="trailing" constant="24" id="nu4-ZP-6YM"/>
+                            <constraint firstItem="ERO-NZ-QXj" firstAttribute="top" secondItem="3Yf-9l-Uol" secondAttribute="bottom" constant="34" id="s06-fL-Y93"/>
                             <constraint firstAttribute="trailing" secondItem="3Yf-9l-Uol" secondAttribute="trailing" constant="16" id="s6C-iu-SFP"/>
                         </constraints>
                     </view>

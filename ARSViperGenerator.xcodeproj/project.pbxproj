@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27206DA31DAC479200C01D98 /* FilesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27206DA21DAC479200C01D98 /* FilesGenerator.swift */; };
 		27C204721DAC358100DCAC81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C204711DAC358100DCAC81 /* AppDelegate.swift */; };
 		27C204741DAC358100DCAC81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C204731DAC358100DCAC81 /* ViewController.swift */; };
 		27C204761DAC358100DCAC81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C204751DAC358100DCAC81 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27206DA21DAC479200C01D98 /* FilesGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesGenerator.swift; sourceTree = "<group>"; };
 		27C2046E1DAC358100DCAC81 /* ARSViperGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSViperGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C204711DAC358100DCAC81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C204731DAC358100DCAC81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				27C204711DAC358100DCAC81 /* AppDelegate.swift */,
 				27C204731DAC358100DCAC81 /* ViewController.swift */,
+				27206DA21DAC479200C01D98 /* FilesGenerator.swift */,
 				27C204751DAC358100DCAC81 /* Assets.xcassets */,
 				27C204771DAC358100DCAC81 /* Main.storyboard */,
 				27C2047A1DAC358100DCAC81 /* Info.plist */,
@@ -135,6 +138,7 @@
 			files = (
 				27C204741DAC358100DCAC81 /* ViewController.swift in Sources */,
 				27C204721DAC358100DCAC81 /* AppDelegate.swift in Sources */,
+				27206DA31DAC479200C01D98 /* FilesGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 				27C2047F1DAC358100DCAC81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
